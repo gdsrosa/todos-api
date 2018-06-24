@@ -4,6 +4,6 @@ from rest_framework import serializers
 
 class TodoSerializer(serializers.ModelSerializer):
     done = serializers.BooleanField(default=False)
-
-    model = Todo
-    fields = ('title', 'body', 'done')
+    class Meta:
+        model = Todo
+        fields = ('title', 'body', 'done')
