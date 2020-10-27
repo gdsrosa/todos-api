@@ -72,4 +72,28 @@ $ git push --set-upstream fork your-branch-name
 $ python manage.py test todos
 ```
 
-Happy coding!
+### Running the app
+
+
+#### Docker Compose
+
+This application is dockerized and it's managed by Docker Compose. See [docker-compose.yml](https://github.com/gdsrosa/todos-api/blob/master/docker-compose.yml).
+
+
+#### Prerequisites
+
+Install [Docker](https://www.docker.com/get-started) for your OS.
+
+#### Starting the app
+
+First build the `web` and `db` containers:
+
+```
+$ docker-compose build web db
+```
+
+Then, you can start the app:
+
+```
+$ docker-compose up
+```
